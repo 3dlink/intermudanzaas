@@ -31,7 +31,7 @@ Crear Objeto
 
 @section('breadcrumbs')
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{url('/')}}">
+	<a itemprop="item" href="{{url('/app/')}}">
 		<span itemprop="name">
 			{{ Lang::get('titles.app') }}
 		</span>
@@ -40,7 +40,7 @@ Crear Objeto
 	<meta itemprop="position" content="1" />
 </li>
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{ url('/objects') }}">
+	<a itemprop="item" href="{{ url('/app/objects') }}">
 		<span itemprop="name">
 			Objetos
 		</span>
@@ -49,7 +49,7 @@ Crear Objeto
 	<meta itemprop="position" content="2" />
 </li>
 <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="/objects/create">
+	<a itemprop="item" href="/app/objects/create">
 		<span itemprop="name">
 			Crear Objeto
 		</span>
@@ -76,9 +76,9 @@ Crear Objeto
 
 							<div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('name') ? 'is-invalid' :'' }}">
-									{!! Form::text('name', NULL, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[A-Z,a-z, ]*')) !!}
+									{!! Form::text('name', NULL, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[\w,á,é,í,ó,ú, ]*')) !!}
 									{!! Form::label('name', 'Nombre', array('class' => 'mdl-textfield__label')); !!}
-									<span class="mdl-textfield__error">Solo letras</span>
+									<span class="mdl-textfield__error">Solo letras y números</span>
 								</div>
 							</div>
 

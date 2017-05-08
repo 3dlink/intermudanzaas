@@ -72,7 +72,7 @@ class RoomsController extends Controller
             $room->description  = $request->input('description');
             $room->save();
 
-            return redirect('rooms')->with('status', 'Cuarto creado éxitosamente!');
+            return redirect('app/rooms')->with('status', 'Cuarto creado éxitosamente!');
         }
     }
 
@@ -120,7 +120,7 @@ class RoomsController extends Controller
             $room->description  = $request->input('description');
             $room->save();
 
-            return redirect('rooms')->with('status', 'Cuarto actualizado éxitosamente!');
+            return redirect('app/rooms')->with('status', 'Cuarto actualizado éxitosamente!');
         }
     }
 
@@ -137,14 +137,6 @@ class RoomsController extends Controller
         $room->boxes()->detach();
         $room->delete();
 
-        return redirect('rooms')->with('status', 'Cuarto eliminado éxitosamente!');
-    }
-
-    public function test()
-    {
-        $rooms = Room::all();
-        return view('cotizacion.create', [
-            'rooms' => $rooms
-        ]);
+        return redirect('app/rooms')->with('status', 'Cuarto eliminado éxitosamente!');
     }
 }

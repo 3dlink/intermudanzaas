@@ -25,7 +25,7 @@ dialog + .backdrop {
 
 @section('breadcrumbs')
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="{{url('/')}}">
+		<a itemprop="item" href="{{url('/app')}}">
 			<span itemprop="name">
 				{{ Lang::get('titles.app') }}
 			</span>
@@ -34,7 +34,7 @@ dialog + .backdrop {
 		<meta itemprop="position" content="1" />
 	</li>
 	<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="/users" disabled>
+		<a itemprop="item" href="app/users" disabled>
 			<span itemprop="name">
 				Usuarios
 			</span>
@@ -72,7 +72,7 @@ dialog + .backdrop {
 						<tr>
 							<td class="mdl-data-table__cell--non-numeric">{{$a_user->email}}</td>
 							<td class="mdl-data-table__cell--non-numeric">
-										@if ($a_user->role->id == 3 )
+										@if ($a_user->role->id == 5 )
 											@php
 									            $access_level   = 'Cliente';
 									            $access_class 	= 'mdl-color--green-200 mdl-color-text--white';
@@ -80,7 +80,7 @@ dialog + .backdrop {
 											@endphp
 										@elseif ($a_user->role->id == 2 )
 											@php
-									            $access_level   = 'Personal Operativo';
+									            $access_level   = 'Logística';
 									            $access_class 	= 'mdl-color--green-400 mdl-color-text--white';
 									            $access_icon	= 'lock_outline';
 											@endphp
@@ -88,6 +88,18 @@ dialog + .backdrop {
 											@php
 									            $access_level   = 'Administrador';
 									            $access_class 	= 'mdl-color--green-600 mdl-color-text--white';
+									            $access_icon	= 'verified_user';
+											@endphp
+										@elseif ($a_user->role->id == 3 )
+											@php
+									            $access_level   = 'Ventas';
+									            $access_class 	= 'mdl-color--green-400 mdl-color-text--white';
+									            $access_icon	= 'verified_user';
+											@endphp
+										@elseif ($a_user->role->id == 4 )
+											@php
+									            $access_level   = 'Coordinación';
+									            $access_class 	= 'mdl-color--green-400 mdl-color-text--white';
 									            $access_icon	= 'verified_user';
 											@endphp
 										@endif
@@ -110,23 +122,17 @@ dialog + .backdrop {
 							@if(!$user->hasRole('usuario'))
 
 								{{-- VIEW USER PROFILE ICON BUTTON --}}
-								<a href="{{ route('profile.show', $a_user->id) }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Ver perfil">
+								<a href="{{ route('app.profile.show', $a_user->id) }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Ver perfil">
 									<i class="material-icons">person_outline</i>
 								</a>
 
-
-<!-- 								{{-- VIEW USER ACCOUNT ICON BUTTON --}}
-								<a href="{{ URL::to('users/' . $a_user->id) }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Ver cuenta">
-									<i class="material-icons">account_circle</i>
-								</a> -->
-
 								{{-- EDIT USER ICON BUTTON --}}
-								<a href="{{ URL::to('users/' . $a_user->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Editar">
+								<a href="{{ URL::to('app/users/' . $a_user->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Editar">
 									<i class="material-icons">edit</i>
 								</a>
 
 								{{-- DELETE ICON BUTTON AND FORM CALL --}}
-								{!! Form::open(array('url' => 'users/' . $a_user->id, 'class' => 'inline-block', 'id' => 'delete_'.$a_user->id)) !!}
+								{!! Form::open(array('url' => 'app/users/' . $a_user->id, 'class' => 'inline-block', 'id' => 'delete_'.$a_user->id)) !!}
 									{!! Form::hidden('_method', 'DELETE') !!}
 									<a href="#" class="dialog-button dialog-trigger-delete dialog-trigger{{$a_user->id}} mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-userid="{{$a_user->id}}" title="Eliminar">
 										<i class="material-icons">delete_forever</i>
@@ -141,7 +147,7 @@ dialog + .backdrop {
 		</div>
 	</div>
     <div class="mdl-card__menu" style="top: -5px;">
-		<a href="{{ url('/users/create') }}" class="mdl-button mdl-button--icon mdl-inline-expanded mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--white inline-block" title="Crear Usuario">
+		<a href="{{ url('app/users/create') }}" class="mdl-button mdl-button--icon mdl-inline-expanded mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--white inline-block" title="Crear Usuario">
 			<i class="material-icons">person_add</i>
 		</a>
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search-white"  style="vertical-align: middle;padding: 17px 0;">

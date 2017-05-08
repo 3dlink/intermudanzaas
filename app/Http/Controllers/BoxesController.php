@@ -96,7 +96,7 @@ class BoxesController extends Controller
                 $box->rooms()->attach($rooms);
             }
 
-            return redirect('boxes')->with('status', 'Caja creada éxitosamente!');
+            return redirect('app/boxes')->with('status', 'Caja creada éxitosamente!');
         }
     }
 
@@ -167,7 +167,7 @@ class BoxesController extends Controller
 
             $box->save();
 
-            return redirect('boxes')->with('status', 'Caja actualizada éxitosamente!');
+            return redirect('app/boxes')->with('status', 'Caja actualizada éxitosamente!');
         }
     }
 
@@ -183,6 +183,6 @@ class BoxesController extends Controller
         $object->rooms()->detach();
         $object->delete();
 
-        return redirect('objects')->with('status', 'Caja eliminada éxitosamente!');
+        return redirect('app/boxes')->with('status', 'Caja eliminada éxitosamente!');
     }
 }

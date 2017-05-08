@@ -1,4 +1,6 @@
-<?php namespace App\Http\Middleware;
+<?php 
+
+namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
@@ -36,7 +38,7 @@ class Administrator
             if ($request->ajax()) {
                 return response('Unauthorized.', 401);
             } else {
-                return redirect()->guest('auth/login');
+                return redirect()->guest('app/auth/login');
             }
         } else {
             if ($this->auth->user()->hasRole('administrador')) {

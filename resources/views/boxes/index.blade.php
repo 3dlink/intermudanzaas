@@ -25,7 +25,7 @@ dialog + .backdrop {
 
 @section('breadcrumbs')
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="{{url('/')}}">
+		<a itemprop="item" href="{{url('/app/')}}">
 			<span itemprop="name">
 				{{ Lang::get('titles.app') }}
 			</span>
@@ -34,7 +34,7 @@ dialog + .backdrop {
 		<meta itemprop="position" content="1" />
 	</li>
 	<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="/boxes" disabled>
+		<a itemprop="item" href="app/boxes" disabled>
 			<span itemprop="name">
 				Cajas
 			</span>
@@ -80,15 +80,15 @@ dialog + .backdrop {
 							<td>{{ count($a_box->rooms) }}</td>
 							<td class="mdl-data-table__cell--non-numeric">
 								{{-- SHOW ICON BUTTON --}}
-								<a href="{{ route('boxes.show', $a_box->id) }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Ver detalle">
+								<a href="{{ route('app.boxes.show', $a_box->id) }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Ver detalle">
 									<i class="material-icons">visibility</i>
 								</a>
 								{{-- EDIT ICON BUTTON --}}
-								<a href="{{ URL::to('boxes/' . $a_box->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Editar">
+								<a href="{{ URL::to('app/boxes/' . $a_box->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Editar">
 									<i class="material-icons">edit</i>
 								</a>
 								{{-- DELETE ICON BUTTON AND FORM CALL --}}
-								{!! Form::open(array('url' => 'boxes/' . $a_box->id, 'class' => 'inline-block', 'id' => 'delete_'.$a_box->id)) !!}
+								{!! Form::open(array('url' => 'app/boxes/' . $a_box->id, 'class' => 'inline-block', 'id' => 'delete_'.$a_box->id)) !!}
 									{!! Form::hidden('_method', 'DELETE') !!}
 									<a href="#" class="dialog-button dialog-trigger-delete dialog-trigger{{$a_box->id}} mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-userid="{{$a_box->id}}" title="Eliminar">
 										<i class="material-icons">delete_forever</i>
@@ -102,7 +102,7 @@ dialog + .backdrop {
 		</div>
 	</div>
     <div class="mdl-card__menu" style="top: -5px;">
-		<a href="{{ url('/boxes/create') }}" class="mdl-button mdl-button--icon mdl-inline-expanded mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--white inline-block" title="Crear Caja">
+		<a href="{{ url('app/boxes/create') }}" class="mdl-button mdl-button--icon mdl-inline-expanded mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--white inline-block" title="Crear Caja">
 			<i class="material-icons">add</i>
 		</a>
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search-white"  style="vertical-align: middle;padding: 17px 0;">

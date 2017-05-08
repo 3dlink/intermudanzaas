@@ -29,8 +29,8 @@ class Kernel extends HttpKernel {
         'guest' 		=> \App\Http\Middleware\RedirectIfAuthenticated::class,
         'currentUser' 	=> \App\Http\Middleware\CheckCurrentUser::class,
         'administrator' => \App\Http\Middleware\Administrator::class,
-        'analyst' 		=> \App\Http\Middleware\Analyst::class,
-        'supervisor' 		=> \App\Http\Middleware\Supervisor::class,
+        'VCL' 			=> \App\Http\Middleware\VCL::class,
+        'coordinacion' 	=> \App\Http\Middleware\Coordinacion::class,
 	];
 
 }

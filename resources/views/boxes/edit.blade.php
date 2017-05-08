@@ -22,7 +22,7 @@ Editando {{ ucfirst($box->name) }}
 @section('breadcrumbs')
 
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{url('/')}}">
+	<a itemprop="item" href="{{url('/app/')}}">
 		<span itemprop="name">
 			{{ Lang::get('titles.app') }}
 		</span>
@@ -31,9 +31,9 @@ Editando {{ ucfirst($box->name) }}
 	<meta itemprop="position" content="1" />
 </li>
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<a itemprop="item" href="{{ url('/boxes') }}">
+<a itemprop="item" href="{{ url('app/boxes') }}">
 		<span itemprop="name">
-			Objetos
+			Cajas
 		</span>
 	</a>
 	<i class="material-icons">chevron_right</i>
@@ -41,7 +41,7 @@ Editando {{ ucfirst($box->name) }}
 </li>
 
 <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<a itemprop="item" href="/boxes/{{ $box->id }}/edit">
+<a itemprop="item" href="app/boxes/{{ $box->id }}/edit">
 		<span itemprop="name">
 			Editando
 		</span>
@@ -69,9 +69,9 @@ Editando {{ ucfirst($box->name) }}
 
 							<div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('name') ? 'is-invalid' :'' }}">
-									{!! Form::text('name', $box->name, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[A-Z,a-z, ]*')) !!}
+									{!! Form::text('name', $box->name, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[\w,á,é,í,ó,ú, ]*')) !!}
 									{!! Form::label('name', 'Nombre', array('class' => 'mdl-textfield__label')); !!}
-									<span class="mdl-textfield__error">Solo letras</span>
+									<span class="mdl-textfield__error">Solo letras y números</span>
 								</div>
 							</div>
 

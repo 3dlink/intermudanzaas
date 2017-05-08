@@ -31,7 +31,7 @@ dialog + .backdrop {
 
 @section('breadcrumbs')
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="{{url('/')}}">
+		<a itemprop="item" href="{{url('app/')}}">
 			<span itemprop="name">
 				{{ Lang::get('titles.app') }}
 			</span>
@@ -40,7 +40,7 @@ dialog + .backdrop {
 		<meta itemprop="position" content="1" />
 	</li>
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="{{ url('/users') }}">
+		<a itemprop="item" href="{{ url('app/users') }}">
 			<span itemprop="name">
 				Usuarios
 			</span>
@@ -49,7 +49,7 @@ dialog + .backdrop {
 		<meta itemprop="position" content="2" />
 	</li>
 	<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="/users/create">
+		<a itemprop="item" href="app/users/create">
 			<span itemprop="name">
 				Crear Usuario
 			</span>
@@ -74,22 +74,6 @@ dialog + .backdrop {
 
 							<div class="mdl-grid ">
 
-<!-- 								<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('empresa') ? 'is-invalid' :'' }}">
-										{!! Form::text('empresa', NULL, array('id' => 'empresa', 'class' => 'mdl-textfield__input')) !!}
-										{!! Form::label('empresa', 'Empresa', array('class' => 'mdl-textfield__label')); !!}
-										<span class="mdl-textfield__error"></span>
-									</div>
-								</div>
-
-								<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('name') ? 'is-invalid' :'' }}">
-										{!! Form::text('name', NULL, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[A-Z,a-z,0-9]*')) !!}
-										{!! Form::label('name', Lang::get('auth.name') , array('class' => 'mdl-textfield__label')); !!}
-										<span class="mdl-textfield__error">Solo letras y números</span>
-									</div>
-								</div> -->
-
 								<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('email') ? 'is-invalid' :'' }}">
 										{!! Form::email('email', NULL, array('id' => 'email', 'class' => 'mdl-textfield__input')) !!}
@@ -99,7 +83,7 @@ dialog + .backdrop {
 								</div>
 								<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
 							        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('first_name') ? 'is-invalid' :'' }}">
-							            {!! Form::text('first_name', NULL, array('id' => 'first_name', 'class' => 'mdl-textfield__input', 'pattern' => '[A-Z,a-z]*')) !!}
+							            {!! Form::text('first_name', NULL, array('id' => 'first_name', 'class' => 'mdl-textfield__input', 'pattern' => '[A-Z,a-z,á,é,í,ó,ú,]*')) !!}
 							            {!! Form::label('first_name', 'Nombre', array('class' => 'mdl-textfield__label')); !!}
 							            <span class="mdl-textfield__error">Solo letras</span>
 							        </div>
@@ -142,7 +126,7 @@ dialog + .backdrop {
 
 								<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-select mdl-select__fullwidth {{ $errors->has('user_level') ? 'is-invalid' :'' }}">
-										{!! Form::select('user_level', array('' => '', '3' => 'Cliente', '2' => 'Personal Operativo', '1' => 'Administrador'), NULL, array('class' => 'mdl-selectfield__select mdl-textfield__input', 'id' => 'user_level')) !!}
+										{!! Form::select('user_level', array('' => '', '4' => 'Coordinación', '3' => 'Ventas', '2' => 'Logística', '1' => 'Administrador'), NULL, array('class' => 'mdl-selectfield__select mdl-textfield__input', 'id' => 'user_level')) !!}
 									    <label for="user_level">
 									        <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
 									    </label>
@@ -199,8 +183,6 @@ dialog + .backdrop {
 						{!! Form::button('<i class="material-icons">save</i>', array('class' => 'dialog-button-icon-save mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect', 'title' => 'Crear usuario')) !!}
 					</span>
 			    </div>
-
-			    <!-- @include('dialogs.dialog-save') -->
 
 		    {!! Form::close() !!}
 

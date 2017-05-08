@@ -124,7 +124,7 @@ class ProfilesController extends Controller {
             $this->throwValidationException(
                 $request, $profile_validator
                 );
-            return redirect('profile/'.$user->name.'/edit')->withErrors($validator)->withInput();
+            return redirect('app/profile/'.$user->name.'/edit')->withErrors($validator)->withInput();
         }
 
         $user = User::find($id);
@@ -172,7 +172,7 @@ class ProfilesController extends Controller {
         $profile->profile_pic = $pic;
         $user->profile()->save($profile);
         
-        return redirect('profile/'.$user->id)->with('status', 'Perfil actualizado!');
+        return redirect('app/profile/'.$user->id)->with('status', 'Perfil actualizado!');
     }
 
     // FUNCTON TO RETURN USER PROFILE BACKGROUND IMAGE

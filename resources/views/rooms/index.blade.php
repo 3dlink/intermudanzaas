@@ -25,7 +25,7 @@ dialog + .backdrop {
 
 @section('breadcrumbs')
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="{{url('/')}}">
+		<a itemprop="item" href="{{url('/app/')}}">
 			<span itemprop="name">
 				{{ Lang::get('titles.app') }}
 			</span>
@@ -34,7 +34,7 @@ dialog + .backdrop {
 		<meta itemprop="position" content="1" />
 	</li>
 	<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="/rooms" disabled>
+		<a itemprop="item" href="/app/rooms" disabled>
 			<span itemprop="name">
 				Cuartos
 			</span>
@@ -74,11 +74,11 @@ dialog + .backdrop {
 							<td class="mdl-data-table__cell--non-numeric">{{ucfirst($a_room->description)}}</td>
 							<td class="mdl-data-table__cell--non-numeric">
 								{{-- EDIT USER ICON BUTTON --}}
-								<a href="{{ URL::to('rooms/' . $a_room->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Editar">
+								<a href="{{ URL::to('app/rooms/' . $a_room->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Editar">
 									<i class="material-icons">edit</i>
 								</a>
 								{{-- DELETE ICON BUTTON AND FORM CALL --}}
-								{!! Form::open(array('url' => 'rooms/' . $a_room->id, 'class' => 'inline-block', 'id' => 'delete_'.$a_room->id)) !!}
+								{!! Form::open(array('url' => 'app/rooms/' . $a_room->id, 'class' => 'inline-block', 'id' => 'delete_'.$a_room->id)) !!}
 									{!! Form::hidden('_method', 'DELETE') !!}
 									<a href="#" class="dialog-button dialog-trigger-delete dialog-trigger{{$a_room->id}} mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-userid="{{$a_room->id}}" title="Eliminar">
 										<i class="material-icons">delete_forever</i>
@@ -92,7 +92,7 @@ dialog + .backdrop {
 		</div>
 	</div>
     <div class="mdl-card__menu" style="top: -5px;">
-		<a href="{{ url('/rooms/create') }}" class="mdl-button mdl-button--icon mdl-inline-expanded mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--white inline-block" title="Crear Cuarto">
+		<a href="{{ url('app//rooms/create') }}" class="mdl-button mdl-button--icon mdl-inline-expanded mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--white inline-block" title="Crear Cuarto">
 			<i class="material-icons">add</i>
 		</a>
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search-white"  style="vertical-align: middle;padding: 17px 0;">

@@ -4,7 +4,7 @@
 	    <meta charset="utf-8">
 	    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	    <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
-	    <title>No se ha encontrado la página | Error 404 | 3Dlink</title>
+	    <title>No se ha encontrado la página | Error 404 | Intermudanzas</title>
 	    <meta content="Sorry, the page or image you are looking for cannot be found. Error 404." name="description">
 	    <meta content="Jeremy Edgar Kenedy" name="author">
 	    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport">
@@ -44,10 +44,10 @@
 	            </div>
 	            <div class="wrap">
 	                <div class="left size-6">
-	                    <a class="button border fast" href="{{url('/')}}">Inicio</a>
+	                    <a class="button border fast" href="{{url('/app')}}">Inicio</a>
 	                </div>
 	                <div class="left size-6">
-	                    <a class="button border fast" href="{{url('/login')}}">Entrar</a>
+	                    <a class="button border fast" href="{{url('app/auth/login')}}">Entrar</a>
 	                </div>
 	            </div>
 	        </div>

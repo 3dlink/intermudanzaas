@@ -25,7 +25,7 @@ dialog + .backdrop {
 
 @section('breadcrumbs')
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="{{url('/')}}">
+		<a itemprop="item" href="{{url('/app/')}}">
 			<span itemprop="name">
 				{{ Lang::get('titles.app') }}
 			</span>
@@ -34,7 +34,7 @@ dialog + .backdrop {
 		<meta itemprop="position" content="1" />
 	</li>
 	<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="/objects" disabled>
+		<a itemprop="item" href="/app/objects" disabled>
 			<span itemprop="name">
 				Objetos
 			</span>
@@ -80,15 +80,15 @@ dialog + .backdrop {
 							<td>{{ count($a_obj->rooms) }}</td>
 							<td class="mdl-data-table__cell--non-numeric">
 								{{-- SHOW ICON BUTTON --}}
-								<a href="{{ route('objects.show', $a_obj->id) }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Ver detalle">
+								<a href="{{ route('app.objects.show', $a_obj->id) }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Ver detalle">
 									<i class="material-icons">visibility</i>
 								</a>
 								{{-- EDIT ICON BUTTON --}}
-								<a href="{{ URL::to('objects/' . $a_obj->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Editar">
+								<a href="{{ URL::to('app/objects/' . $a_obj->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Editar">
 									<i class="material-icons">edit</i>
 								</a>
 								{{-- DELETE ICON BUTTON AND FORM CALL --}}
-								{!! Form::open(array('url' => 'objects/' . $a_obj->id, 'class' => 'inline-block', 'id' => 'delete_'.$a_obj->id)) !!}
+								{!! Form::open(array('url' => 'app/objects/' . $a_obj->id, 'class' => 'inline-block', 'id' => 'delete_'.$a_obj->id)) !!}
 									{!! Form::hidden('_method', 'DELETE') !!}
 									<a href="#" class="dialog-button dialog-trigger-delete dialog-trigger{{$a_obj->id}} mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-userid="{{$a_obj->id}}" title="Eliminar">
 										<i class="material-icons">delete_forever</i>
@@ -102,7 +102,7 @@ dialog + .backdrop {
 		</div>
 	</div>
     <div class="mdl-card__menu" style="top: -5px;">
-		<a href="{{ url('/objects/create') }}" class="mdl-button mdl-button--icon mdl-inline-expanded mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--white inline-block" title="Crear Objeto">
+		<a href="{{ url('/app/objects/create') }}" class="mdl-button mdl-button--icon mdl-inline-expanded mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--white inline-block" title="Crear Objeto">
 			<i class="material-icons">add</i>
 		</a>
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search-white"  style="vertical-align: middle;padding: 17px 0;">

@@ -8,9 +8,9 @@
 		<div class="mdl-card card-wide" style="width:100%;" itemscope itemtype="http://schema.org/Person">
 			<div class="mdl-user-avatar">
 				@if($user->profile->profile_pic != NULL)
-				<img src="{{ url($user->profile->profile_pic) }}" alt="{{ $user->name }}">
+				<img src="{{ url($user->profile->profile_pic) }}" alt="{{ $user->first_name }}">
 				@else
-				<img src="{{ Gravatar::get($user->email) }}" alt="{{ $user->name }}">
+				<img src="{{ Gravatar::get($user->email) }}" alt="{{ $user->first_name }}">
 				@endif
 				<span itemprop="image" style="display:none;">{{ Gravatar::get($user->email) }}</span>
 			</div>
@@ -23,14 +23,6 @@
 				<div class="mdl-grid full-grid padding-0">
 					<div class="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet mdl-cell--6-col-desktop">
 						<ul class="demo-list-icon mdl-list">
-<!-- 							<li class="mdl-list__item mdl-typography--font-light">
-								<div class="mdl-list__item-primary-content">
-									<i class="material-icons mdl-list__item-icon">location_city</i>
-									<span itemprop="name">
-										{{ $user->empresa }}
-									</span>
-								</div>
-							</li> -->
 							<li class="mdl-list__item mdl-typography--font-light">
 								<div class="mdl-list__item-primary-content">
 									<i class="material-icons mdl-list__item-icon">person</i>
@@ -125,14 +117,14 @@
 					<div class="mdl-cell mdl-cell--12-col">
 						@if ($user->profile)
 						@if (Auth::user()->id == $user->id)
-						<a href="{{ route('profile.edit', Auth::user()->id) }}" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--3dp mdl-button--raised mdl-button--primary mdl-color-text--white">
+						<a href="{{ route('app.profile.edit', Auth::user()->id) }}" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--3dp mdl-button--raised mdl-button--primary mdl-color-text--white">
 							<i class="material-icons padding-right-half-1">edit</i>
 							{{ Lang::get('titles.editProfile') }}
 						</a>
 						@endif
 						@else
 						<p class="text-center">{{ Lang::get('profile.noProfileYet') }}</p>
-						{!! HTML::link(URL::to('/profile/'.Auth::user()->id.'/edit'), Lang::get('titles.createProfile'), array('class' => 'mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--3dp')) !!}
+						{!! HTML::link(URL::to('app/profile/'.Auth::user()->id.'/edit'), Lang::get('titles.createProfile'), array('class' => 'mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--3dp')) !!}
 						@endif
 					</div>
 				</div>
@@ -140,7 +132,7 @@
 			<div class="mdl-card__menu">
 
 				@if (!Auth::guest() && Auth::user()->hasRole('administrador'))
-				<a href="{{ URL::to('users/' . $user->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+				<a href="{{ URL::to('app/users/' . $user->id . '/edit') }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
 					<i class="material-icons">edit</i>
 				</a>
 				@endif

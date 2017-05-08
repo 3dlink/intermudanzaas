@@ -23,7 +23,7 @@ Crear Caja
 
 @section('breadcrumbs')
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{url('/')}}">
+	<a itemprop="item" href="{{url('/app/')}}">
 		<span itemprop="name">
 			{{ Lang::get('titles.app') }}
 		</span>
@@ -32,7 +32,7 @@ Crear Caja
 	<meta itemprop="position" content="1" />
 </li>
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{ url('/boxes') }}">
+	<a itemprop="item" href="{{ url('app/boxes') }}">
 		<span itemprop="name">
 			Cajas
 		</span>
@@ -41,7 +41,7 @@ Crear Caja
 	<meta itemprop="position" content="2" />
 </li>
 <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="/boxes/create">
+	<a itemprop="item" href="app/boxes/create">
 		<span itemprop="name">
 			Crear Caja
 		</span>
@@ -68,9 +68,9 @@ Crear Caja
 
 							<div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('name') ? 'is-invalid' :'' }}">
-									{!! Form::text('name', NULL, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[A-Z,a-z, ]*')) !!}
+									{!! Form::text('name', NULL, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[\w,á,é,í,ó,ú, ]*')) !!}
 									{!! Form::label('name', 'Nombre', array('class' => 'mdl-textfield__label')); !!}
-									<span class="mdl-textfield__error">Solo letras</span>
+									<span class="mdl-textfield__error">Solo letras y números</span>
 								</div>
 							</div>
 

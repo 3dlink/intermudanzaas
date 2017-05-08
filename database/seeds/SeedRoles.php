@@ -18,7 +18,15 @@ class SeedRoles extends Seeder
         ]);
 
         Role::create([
-            'name'   => 'operativo'
+            'name'   => 'logistica'
+        ]);
+
+        Role::create([
+            'name'   => 'ventas'
+        ]);
+
+        Role::create([
+            'name'   => 'coordinacion'
         ]);
 
         Role::create([

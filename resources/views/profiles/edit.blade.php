@@ -32,7 +32,7 @@ float: left;
 @section('breadcrumbs')
 
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{url('/')}}">
+	<a itemprop="item" href="{{url('/app/')}}">
 		<span itemprop="name">
 			{{ Lang::get('titles.app') }}
 		</span>
@@ -42,7 +42,7 @@ float: left;
 </li>
 
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{ url('/users') }}">
+	<a itemprop="item" href="{{ url('app/users') }}">
 		<span itemprop="name">
 			Usuarios
 		</span>
@@ -52,7 +52,7 @@ float: left;
 </li>
 
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{ url('/profile/'.Auth::user()->id) }}">
+	<a itemprop="item" href="{{ url('/app/profile/'.Auth::user()->id) }}">
 		<span itemprop="name">
 			{{ Lang::get('titles.profile') }}
 		</span>
@@ -82,7 +82,7 @@ float: left;
 			<h2 class="mdl-card__title-text">Editando perfil de {{$user->first_name.' '.$user->last_name}}</h2>
 		</div>
 
-		{!! Form::model($user->profile, ['method' => 'PATCH', 'route' => ['profile.update', $user->id],  'class' => '', 'role' => 'form', 'enctype' => 'multipart/form-data' ]) !!}
+		{!! Form::model($user->profile, ['method' => 'PATCH', 'route' => ['app.profile.update', $user->id],  'class' => '', 'role' => 'form', 'enctype' => 'multipart/form-data' ]) !!}
 		<div class="mdl-card card-wide" style="width:100%;" itemscope itemtype="http://schema.org/Person">
 
 			<div class="mdl-user-avatar">
@@ -105,21 +105,6 @@ float: left;
 					<div class="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
 
 						<div class="mdl-grid ">
-
-<!-- 							<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
-								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('empresa') ? 'is-invalid' :'' }}">
-									{!! Form::text('empresa', $user->empresa, array('id' => 'empresa', 'class' => 'mdl-textfield__input', 'disabled')) !!}
-									{!! Form::label('empresa', 'Empresa' , array('class' => 'mdl-textfield__label')); !!}
-									<span class="mdl-textfield__error"></span>
-								</div>
-							</div>
-							<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
-								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('name') ? 'is-invalid' :'' }}">
-									{!! Form::text('name', $user->name, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[A-Z,a-z,0-9]*', 'disabled')) !!}
-									{!! Form::label('name', Lang::get('auth.name') , array('class' => 'mdl-textfield__label')); !!}
-									<span class="mdl-textfield__error">Solo letras y números</span>
-								</div>
-							</div> -->
 							<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('email') ? 'is-invalid' :'' }}">
 									{!! Form::email('email', $user->email, array('id' => 'email', 'class' => 'mdl-textfield__input', 'disabled')) !!}
@@ -226,34 +211,26 @@ float: left;
 	mdl_dialog('.dialog-button-save');
 	mdl_dialog('.dialog-button-icon-save');
 
-		// $('form input, form select, form textarea').on('input', function() {
-		//     $('.save-actions').show();
-		// });
+	var dialog = document.querySelector('#dialog');
+	dialogPolyfill.registerDialog(dialog);
 
-		// $('.mdl-select-input, .mdl-file-input').change(function(event) {
-		// 	$('.save-actions').show();
-		// });
+	$('.dialog-close').click(function(){
+		$('.backdrop').css("z-index", -100001);
+	});
 
-		var dialog = document.querySelector('#dialog');
-		dialogPolyfill.registerDialog(dialog);
+	$('.dialog-button-icon-save').click(function(){
+		$('.backdrop').css("z-index", 1000001);
+	});
 
-		$('.dialog-close').click(function(){
-			$('.backdrop').css("z-index", -100001);
-		});
+	$('#submit').click(function(event) {
+		$('form').submit();
+	});
 
-		$('.dialog-button-icon-save').click(function(){
-			$('.backdrop').css("z-index", 1000001);
-		});
+</script>
 
-		$('#submit').click(function(event) {
-			$('form').submit();
-		});
+@endsection
 
-	</script>
-
-	@endsection
-
-	@section('dialog_section')
-	<!-- @include('dialogs.dialog-save') -->
-	<div class="backdrop" style="z-index: -100001;"></div>
-	@endsection
+@section('dialog_section')
+<!-- @include('dialogs.dialog-save') -->
+<div class="backdrop" style="z-index: -100001;"></div>
+@endsection

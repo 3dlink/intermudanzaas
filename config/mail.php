@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'host' => env('MAIL_HOST', '3dlinkweb.com'),
+	'host' => env('MAIL_HOST', 'sc3.conectarhosting.com'),
 
 	/*
 	|--------------------------------------------------------------------------

@@ -31,7 +31,7 @@ dialog + .backdrop {
 
 @section('breadcrumbs')
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="{{url('/')}}">
+		<a itemprop="item" href="{{url('/app/')}}">
 			<span itemprop="name">
 				{{ Lang::get('titles.app') }}
 			</span>
@@ -40,7 +40,7 @@ dialog + .backdrop {
 		<meta itemprop="position" content="1" />
 	</li>
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="{{ url('/rooms') }}">
+		<a itemprop="item" href="{{ url('/app/rooms') }}">
 			<span itemprop="name">
 				Cuartos
 			</span>
@@ -49,7 +49,7 @@ dialog + .backdrop {
 		<meta itemprop="position" content="2" />
 	</li>
 	<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-		<a itemprop="item" href="/rooms/create">
+		<a itemprop="item" href="/app/rooms/create">
 			<span itemprop="name">
 				Crear Cuarto
 			</span>

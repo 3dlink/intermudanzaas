@@ -96,7 +96,7 @@ class ObjectsController extends Controller
 	            $object->rooms()->attach($rooms);
 	        }
 
-            return redirect('objects')->with('status', 'Objeto creado éxitosamente!');
+            return redirect('app/objects')->with('status', 'Objeto creado éxitosamente!');
         }
 	}
 
@@ -167,7 +167,7 @@ class ObjectsController extends Controller
 
 	        $object->save();
 
-            return redirect('objects')->with('status', 'Objeto actualizado éxitosamente!');
+            return redirect('app/objects')->with('status', 'Objeto actualizado éxitosamente!');
         }
 	}
 
@@ -183,6 +183,6 @@ class ObjectsController extends Controller
         $object->rooms()->detach();
         $object->delete();
 
-        return redirect('objects')->with('status', 'Objeto eliminado éxitosamente!');
+        return redirect('app/objects')->with('status', 'Objeto eliminado éxitosamente!');
 	}
 }

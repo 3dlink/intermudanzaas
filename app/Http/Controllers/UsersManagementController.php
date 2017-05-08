@@ -57,14 +57,14 @@ class UsersManagementController extends Controller {
 	public function showUsersMainPanel()
 	{
 		$user                   = \Auth::user();
-		$users 			        = User::all();
-		$total_users 	        = \DB::table('users')->count();
+		$users 			        = User::where('role_id', '<>','5')->get();
+		$total_users 	        = count($users);
 
-		$total_users_confirmed  = \DB::table('users')->count();
-		$total_users_confirmed  = \DB::table('users')->where('active', '1')->count();
-		$total_users_locked     = \DB::table('users')->where('resent', '>', 3)->count();
+		// $total_users_confirmed  = \DB::table('users')->count();
+		// $total_users_confirmed  = \DB::table('users')->where('active', '1')->count();
+		// $total_users_locked     = \DB::table('users')->where('resent', '>', 3)->count();
 
-		$total_users_new        = \DB::table('users')->where('active', '0')->count();
+		// $total_users_new        = \DB::table('users')->where('active', '0')->count();
 
 		return view('admin.show-users', [
 			'user' 			        => $user,
@@ -108,7 +108,7 @@ class UsersManagementController extends Controller {
 			'first_name'            => 'required|max:255',
 			'last_name'             => 'required|max:255',
 			'password'              => 'required|min:6|confirmed',
-			'password_confirmation' => 'required|same:password',
+			'password_confirmation' => 'required',
 			'user_level'            => 'required',
 			'bio'                   => '',
 			'phone'                 => '',
@@ -122,7 +122,6 @@ class UsersManagementController extends Controller {
 			'password.min'                      => 'Su contraseña debe tener al menos 6 carácteres',
 			'password_confirmation.required'    => 'Confirme su contraseña',
 			'password.same'                     => 'Sus contraseñas deben coincidir',
-			'password_confirmation.same'        => 'Sus contraseñas deben coincidir',
 			'user_profile_pic.image'            => 'El archivo debe ser una imagen',
 			'user_level.required'               => 'Debe seleccionar un nivel de acceso'
 			]);
@@ -132,10 +131,18 @@ class UsersManagementController extends Controller {
 	{
 		return Validator::make($data, [
 			'email'                 => 'required|email|max:255',
-			'user_level'            => 'required'
+			'first_name'            => 'required|max:255',
+			'last_name'             => 'required|max:255',
+			'user_level'            => 'required',
+			'password'              => 'min:6|confirmed',
+			'password_confirmation' => '',
 			], [
 			'email.required'                    => 'Ingrese un correo electrónico',
-			'user_level.required'               => 'Debe seleccionar un nivel de acceso'
+			'user_level.required'               => 'Debe seleccionar un nivel de acceso',
+			'first_name.required'               => 'Ingrese un nombre',
+			'last_name.required'                => 'Ingrese un apellido',
+			'password.min'                      => 'Su contraseña debe tener al menos 6 carácteres',
+			'password.same'                     => 'Sus contraseñas deben coincidir',
 			]);
 	}
 
@@ -172,12 +179,24 @@ class UsersManagementController extends Controller {
 				);
 		} else {
 			$user 				        = User::find($id);
+			$user->email 				= $request->input('email');
+			$user->first_name			= $request->input('first_name');
+			$user->last_name			= $request->input('last_name');
 			$user->role_id 				= $request->input('user_level');
 
+			if ($request->input('password') != "") {
+				$user->password         	= bcrypt($request->input('password'));
+			}
 			// SAVE USER CORE SETTINGS
 			$user->save();
 
-			return redirect('users/' . $user->id . '/')->with('status', 'Usuario actualizado éxitosamente!');
+			$profile = Profile::find($user->profile->id);
+			$profile->skype_user	= $request->input('skype_user');
+			$profile->phone			= $request->input('phone');
+			$profile->bio 			= $request->input('bio');
+			$profile->save();
+
+			return redirect('app/users/' . $user->id . '/')->with('status', 'Usuario actualizado éxitosamente!');
 
 		}
 	}
@@ -261,7 +280,7 @@ class UsersManagementController extends Controller {
 			$user->profile()->save($profile);
 
 			// THE SUCCESSFUL RETURN
-			return redirect('users')->with('status', 'Usuario creado éxitosamente!');
+			return redirect('app/users')->with('status', 'Usuario creado éxitosamente!');
 		}
 
 	}
@@ -275,13 +294,13 @@ class UsersManagementController extends Controller {
 	public function show($id)
 	{
 		try {
-            $user = User::find($id);
-        } catch (ModelNotFoundException $e) {
-            return view('pages.status')
-            ->with('error',\Lang::get('profile.notYourProfile'))
-            ->with('error_title',\Lang::get('profile.notYourProfileTitle'));
-        }
-        return view('profiles.show')->with('user', $user);
+			$user = User::find($id);
+		} catch (ModelNotFoundException $e) {
+			return view('pages.status')
+			->with('error',\Lang::get('profile.notYourProfile'))
+			->with('error_title',\Lang::get('profile.notYourProfileTitle'));
+		}
+		return view('profiles.show')->with('user', $user);
 	}
 
 	/**
@@ -296,7 +315,7 @@ class UsersManagementController extends Controller {
 		$user = User::find($id);
 		$user->delete();
 
-		return redirect('users')->with('status', 'Usuario eliminado éxitosamente!');
+		return redirect('app/users')->with('status', 'Usuario eliminado éxitosamente!');
 	}
 
 	/**
@@ -308,14 +327,14 @@ class UsersManagementController extends Controller {
 	 */
 	public function getTotalUsers(View $view)
 	{
-		$users                  = \DB::table('users')->get();
-		$total_users            = \DB::table('users')->count();
+		$users                  = User::where('role_id', '<>', '5')->get();
+		$total_users            = count($users);
 		$view->with('totalUsers', $total_users);
 	}
 
 	public function getUsersTotal(){
-		$users                  = \DB::table('users')->get();
-		$total_users            = \DB::table('users')->count();
+		$users                  = User::where('role_id', '<>', '5')->get();
+		$total_users            = count($users);
 		return $total_users;
 	}
 
@@ -323,5 +342,42 @@ class UsersManagementController extends Controller {
 	public function userProfilePicImage($id, $image)
 	{
 		return Image::make(storage_path() . '/users/id/' . $id . '/uploads/images/profile-pics/' . $image)->response();
+	}
+
+	public function pwdValidator(array $data)
+	{
+		return Validator::make($data, [
+			'password'              => 'required|min:6|confirmed',
+			'password_confirmation' => 'required',
+			], [
+			'password.required'                 => 'Ingrese una contraseña',
+			'password.min'                      => 'Su contraseña debe tener al menos 6 carácteres',
+			'password_confirmation.required'    => 'Confirme su contraseña',
+			'password.same'                     => 'Sus contraseñas deben coincidir'
+			]);
+	}
+
+	public function changePwd()
+	{
+		return view('admin.changepwd');
+	}
+
+	public function modifyPwd(Request $request)
+	{
+		$user = \Auth::user();
+
+		$pwdValidator = $this->pwdValidator($request->all());
+
+		if ($pwdValidator->fails()) {
+			$this->throwValidationException(
+				$request, $pwdValidator
+				);
+		}else{
+			$user->password = bcrypt($request->input('password'));
+			$user->defaultPwd = '';
+			$user->save();
+
+			return redirect('app')->with('status', 'Contraseña modificada éxitosamente!');
+		}
 	}
 }

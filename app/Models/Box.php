@@ -10,4 +10,9 @@ class Box extends Model
     {
     	return $this->morphToMany('App\Models\Room', 'contained', 'contains');
     }
+
+    public function mudanza()
+    {
+    	return $this->morphToMany('App\Models\Estimacion', 'contained', 'mudanza');
+    }
 }

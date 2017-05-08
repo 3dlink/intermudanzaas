@@ -16,7 +16,7 @@ Detalle de caja
 
 @section('breadcrumbs')
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{url('/')}}">
+	<a itemprop="item" href="{{url('/app/')}}">
 		<span itemprop="name">
 			{{ Lang::get('titles.app') }}
 		</span>
@@ -25,7 +25,7 @@ Detalle de caja
 	<meta itemprop="position" content="1" />
 </li>
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	<a itemprop="item" href="{{ url('/boxes') }}">
+	<a itemprop="item" href="{{ url('app/boxes') }}">
 		<span itemprop="name">
 			Cajas
 		</span>

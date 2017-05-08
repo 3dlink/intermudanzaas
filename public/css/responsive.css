@@ -1,0 +1,786 @@
+@media screen and (max-width: 1100px){
+	/* GENERAL */
+
+	/* END GENERAL */
+
+
+	/* GALERIA */
+
+	.inner-left{
+		left: 15%;
+	}
+
+	.outer-left{
+		left: 5%;
+	}
+
+	.inner-left-transition{
+		left: 15% !important;
+	}
+
+	.outer-left-transition{
+		left: 5% !important;
+	}
+
+	.inner-right{
+		left: 85%;
+	}
+
+	.outer-right{
+		left: 95%;
+	}
+
+	.inner-right-transition {
+		left: 85% !important;
+	}
+
+	.outer-right-transition{
+		left: 95% !important;
+	}
+
+	/* END GALERIA */
+
+	/* CONTACTO */
+	.contact-logo{
+		width: 55%;
+	}
+	/* END CONTACTO */
+}
+
+@media screen and (max-width: 980px){
+	/* GENERAL */
+
+	.tablet-hidden{
+		display: none !important;
+	}
+
+	/* END GENERAL */
+
+	/* HOME */
+
+	.logo{
+		width: 35%;
+	}
+
+	.home-menu{
+		padding: 15px 35px;
+	}
+
+	.quote-line1{
+		font-size: 20px;
+	}
+
+	.quote-line2{
+		font-size: 30px;
+	}
+
+	.quote-open-1,.quote-close-1,.quote-open-2,.quote-close-2{
+		height: 10px;
+	}
+
+	.intermudanzas{
+		font-size: 16px;
+	}
+
+	.menu-item{
+		font-size: 16px;
+	}
+
+	.slide1{
+		background-size: 150% 100%;
+	}
+
+	/* END HOME */
+
+	/* NOSOTROS */
+
+	.quienes-somos-contenido {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		padding-left: 11%;
+	}
+
+	.quienes-somos-contenido-2 {
+		margin-top: 50px;
+		margin-left: 11%;
+	}
+
+	.quienes-somos-span{
+		font-size: 14px;
+		margin-top: 25px;
+	}
+
+	.quienes-somos-terminosYcondiciones{
+		margin-top: 50px;
+		font-size: 13px;
+		padding: 12px 25px;
+	}
+
+	.quienes-somos-contenido-2 .content{
+		margin: 25px 25px;
+		font-size: 12px;
+	}
+
+	.terminos-y-condiciones-title{
+		font-size: 18px;
+	}
+
+	.p-title{
+		font-size: 18px;
+	}
+
+	.terminos-y-condiciones-p{
+		margin-top: 20px;
+		padding-right: 25px;
+	}
+
+	/* END NOSOTROS */
+
+	/* BENEFICIOS */
+
+	.beneficios-content{
+		margin-bottom: 80px;
+		padding: 0px 5%;
+	}
+
+	.beneficio-container{
+		margin-top: 70px;
+	}
+
+	.beneficio-name{
+		margin-top: 10px;
+		font-size: 15px;
+	}
+
+	.beneficio-img{
+		height: 65px;
+	}
+
+	.servicios-vip .beneficio-img{
+		height: 40px;
+	}
+
+	.alianzas-estrategicas .beneficio-img{
+		height: 50px;
+	}
+
+	.mudanza-maritima .beneficio-img{
+		height: 45px;
+	}
+
+	.honestidad .beneficio-img{
+		height: 55px;
+	}
+
+	.separador{
+		height: 10px;
+	}
+
+	/* END BENEFICIOS */
+
+	/* MUDANZAS */
+	.back{
+		padding: 30px 40px;
+	}
+
+	.mudanzas-back-p{
+		font-size: 12px;
+	}
+
+	.mudanzas-back-flecha{
+		height: 10px;
+	}
+
+	.mudanzas-saber-mas{
+		font-size: 12px;
+		bottom: 18px;
+	}
+
+	/* END MUDANZAS */
+
+
+	/* GALERIA */
+
+	.galeria{
+		margin-top: 40px;
+	}
+
+	.inner-left, .outer-left{
+		left: 10%;
+		top: 10%;
+	}
+
+	.inner-left-transition, .outer-left-transition{
+		left: 10% !important;
+		top: 10% !important;
+	}
+
+	.inner-right, .outer-right{
+		left: 90%;
+		top: 10%;
+	}
+
+	.inner-right-transition, .outer-right-transition{
+		left: 90% !important;
+		top: 10% !important;
+	}
+
+	.middle{
+		top: 15%;
+	}
+
+	.middle-transition{
+		top: 15% !important;
+	}
+
+	/* END GALERIA */
+
+	/* CONTACTO */
+	.contacto{
+		padding: 60px 100px;
+	}
+
+	.contact-container{
+		padding: 0 2%;
+	}
+
+	.contact-form-label{
+		font-size: 15px;
+		margin-top: 5px;
+	}
+
+	.contact-form-input{
+		font-size: 12px;
+		margin-top: 0;
+	}
+
+	.contact-warning{
+		font-size: 12px;
+	}
+
+	.contact-logo{
+		width: 60%;
+	}
+
+	/* END CONTACTO */
+
+	/* FOOTER */
+
+	.footer-span{
+		font-size: 12px;
+	}
+
+	.social-media{
+		margin-top: 12px;
+		font-size: 13px;
+	}
+	/* END FOOTER */
+}
+
+@media screen and (max-width: 820px){
+	.logo{
+		width: 35%;
+	}
+
+	/* GALERIA */
+
+	.galeria-slide{
+		width: 300px;
+		height: 150px;
+	}
+
+	.inner-left, .outer-left{
+		left: 2%;
+		top: 10%;
+	}
+
+	.inner-left-transition, .outer-left-transition{
+		left: 2% !important;
+		top: 10% !important;
+	}
+
+	.inner-right, .outer-right{
+		left: 98%;
+		top: 10%;
+	}
+
+	.inner-right-transition, .outer-right-transition{
+		left: 98% !important;
+		top: 10% !important;
+	}
+
+	/* END GALERIA */
+}
+
+
+@media screen and (max-width: 740px){
+	/* GENERAL */
+
+	.tablet-grid-30{
+		width: 30%;
+	}
+
+	.tablet-grid-50{
+		width: 50%;
+	}
+
+	.tablet-grid-100{
+		width: 100%;
+	}
+
+	.tabler-clearfix{
+		clear: both;
+		display: table;
+		content: " ";
+	}
+
+	/* END GENERAL */
+
+	/* HOME */
+
+	.intermudanzas{
+		font-size: 13px;
+	}
+
+	.menu-item{
+		font-size: 12px;
+		margin: 5px;
+	}
+
+	.logo{
+		width: 40%;
+	}
+
+	/* END HOME*/
+
+	/* BENEFICIOS */
+
+	.beneficio-container{
+		margin-top: 40px;
+	}
+
+	.beneficios-content{
+		margin-bottom: 50px;
+	}
+
+	.servicios-vip, .alianzas-estrategicas, .mudanza-maritima, .tramites-aduaneros, .precio-beneficio, .honestidad {
+		margin-right: 5%;
+	}
+
+	/* END BENEFICIOS */
+
+	/* GALERIA */
+
+	.galeria, .galeria-holder{
+		height: 400px;
+	}
+
+	/* END GALERIA */
+
+
+	/* CONTACTO */
+
+	.contacto{
+		padding: 50px 70px;
+	}
+
+	.contact-logo{
+		transform: translate(-50%, 40%);
+	}
+
+	.contact-form-input{
+		font-size: 10px;
+		height: 25px;
+		width: 85%;
+	}
+
+	textarea.contact-form-input{
+		height: 65px;
+	}
+
+	.contact-submit{
+		font-size: 12px;
+		margin-top: 20px;
+		padding: 4px 35px;
+	}
+
+	/* END CONTACTO */
+
+	/* FOOTER */
+
+	.footer-span{
+		text-align: center;
+	}
+
+	/* END FOOTER */
+}
+
+@media screen and (max-width: 640px){
+	/* GENERAL */
+
+	/* END GENERAL */
+
+	/* HOME */
+
+	.home-menu{
+		padding: 15px 15px;
+	}
+
+	.menu-item{
+		margin: 3px;
+	}
+
+	.logo{
+		width: 40%;
+	}
+
+	/* END HOME */
+
+	/* NOSOTROS */
+
+	.quienes-somos-contenido{
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+
+	.quienes-somos-contenido-2{
+		margin-top: 10px;
+	}
+
+	.quienes-somos-span{
+		font-size: 12px;
+		margin-top: 12px;
+		text-align: justify;
+	}
+
+	.quienes-somos-terminosYcondiciones {
+		margin-top: 15px;
+		font-size: 12px;
+	}
+
+	/* END NOSOTROS */
+
+	/* MUDANZAS */
+
+	.back{
+		padding: 20px 28px;
+	}
+
+	/* END MUDANZAS */
+
+	/* GALERIA */
+
+	.galeria-slide {
+		width: 240px;
+		height: 120px;
+	}
+
+	.flecha{
+		height: 35px;
+	}
+
+	.galeria, .galeria-holder{
+		height: 340px;
+	}
+
+	/* END GALERIA */
+
+	/* CONTACTO */
+
+	.contact-logo{
+		transform: translate(-30%, 100%);
+	}
+
+	/* END CONTACTO */
+}
+
+
+@media screen and (max-width: 520px){
+	/* GENERAL */
+
+	.mobile-grid-100{
+		width: 100%;
+	}
+	.mobile-grid-30{
+		width: 30%;
+	}
+
+	.mobile-clearfix{
+		clear: both;
+		display: table;
+		content: " ";
+	}
+
+	.mobile-hidden{
+		display: none !important;
+	}
+
+	.tablet-hidden{
+		display: none !important; 
+	}
+
+	/* END GENERAL */
+
+	/* HOME */
+
+	.home-menu{
+		padding: 20px 10px;
+		position: fixed;
+	}
+
+	.burguer{
+		display: block;
+		text-align: right !important;
+	}
+
+	.burguer img{
+		cursor: pointer;
+	}
+
+	.mobile-menu-holder{
+		display: block;
+		height: 0;
+		transition: height 1s;
+		text-align: center;
+
+		background-color: rgba(30, 33, 38, 0.8);
+		overflow: hidden;
+	}
+
+	.menu{
+		padding-top: 5px;
+
+	}
+
+	.menu-item{
+		display: block;
+		margin-top: 0px;
+		border-bottom-style: solid;
+		border-bottom-color: rgba(80, 80, 80, 1);
+	}
+
+	.logo{
+		width: 50%;
+	}
+
+	.slide1{
+		background-image: url("../images/slider_fondo1mobile.jpg");
+	}
+
+	.slide2{
+		background-image: url("../images/slider_fondo2mobile.jpg");
+	}
+
+	.slide3{
+		background-image: url("../images/slider_fondo3mobile.jpg");
+	}
+
+	.slide-quote{
+		left: 0;
+		transform: translate(0%, -50%);
+		width: 100%;
+	}
+
+	.quote-line1 {
+		font-size: 10px;
+	}
+
+	.quote-line2{
+		font-size: 20px;
+	}
+
+	.quote-open-1,.quote-close-1,.quote-open-2,.quote-close-2{
+		height: 5px;
+	}
+
+	/* END HOME */
+
+	/* NOSOTROS */
+
+	.quienes-somos-left{
+		background-image: url("../images/quienessomos_fondomobile.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+
+	.quienes-somos-contenido {
+		left: 0;
+		padding: 40px 25px;
+	}
+
+	.quienes-somos-contenido-2 {
+		left: 0;
+		margin: 40px 25px;
+	}
+
+	.quienes-somos-contenido-2 .content{
+		margin: 20px 20px;
+		height: 420px;
+	}
+
+	.quienes-somos-span{
+		text-align: justify;
+		padding: 0 15px;
+	}
+
+	.quienes-somos-terminosYcondiciones{
+		margin-top: 30px;
+	}
+
+	/* END NOSOTROS */
+
+	/* BENEFICIOS */
+
+	.beneficios-content {
+		margin-bottom: 20px;
+		padding: 0 25px;
+	}
+
+	.beneficio-container{
+		margin-top: 30px;
+	}
+
+	.beneficio-name{
+		font-size: 13px;
+	}
+
+	.beneficio-img {
+		height: 35px !important;
+	}
+
+	.beneficios-img-holder{
+		height: 35px;
+	}
+
+	.servicios-vip, .alianzas-estrategicas, .mudanza-maritima, .tramites-aduaneros, .precio-beneficio, .honestidad {
+		margin-right: 5%;
+	}
+
+	.clientes-felices{
+		width: 100%;
+	}
+
+	/* END BENEFICIOS */
+
+	/* GALERIA */
+
+	.galeria{
+		margin-top: 20px;
+		height: 385px;
+	}
+
+	.galeria-holder{
+		height: 350px;
+	}
+
+	.galeria-slide{
+		top: 5% !important;
+		box-shadow: none;
+		height: 200px;
+	}
+
+	.inner-left, .outer-left{
+		top: 5%;
+		left: -100%;
+	}
+
+	.outer-left-transition, .inner-left-transition{
+		left: -100% !important;
+	}
+
+	.inner-right, .outer-right {
+		top: 5%;
+		left: 100%;
+		transform: translate(0%, 0%) !important;
+	}
+
+	.outer-right-transition, .inner-right-transition{
+		left: 100% !important;
+		transform: translate(0%, 0%) !important;
+	}
+
+	.middle{
+		transform: translate(0%,0%);
+		left: 0;
+	}
+
+	.middle-transition{
+		left: 0 !important;
+		-webkit-transform: translate(0%, 0%) !important;
+		transform: translate(0%,0%) !important;
+	}
+
+	.flecha{
+		bottom: 20%;
+	}
+
+	.flecha-der{
+		right: 45%;
+	}
+
+	.flecha-izq{
+		left: 45%;
+	}
+
+	/* END GALERIA */
+
+	/* CONTACTO */
+
+	.contacto{
+		background-image: none;
+		padding: 0;
+	}
+
+	.contact-form{
+		background-image: url("../images/fondo_contacto.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top;
+		padding: 40px 25px;
+	}
+
+	.contact-container{
+		padding: 0;
+	}
+
+	.contact-form-input{
+		height: 30px;
+		width: 85%;
+	}
+
+	textarea.contact-form-input{
+		height: 200px;
+	}
+
+	.contact-right{
+		text-align: center;
+		padding: 0 25px;
+		margin-top: 25px;
+		margin-bottom: 5px;
+	}
+
+	.contact-logo{
+		width: 70%;
+		left: 0;
+		position: relative;
+		transform: translate(0%, 0%);
+	}
+
+	/* END CONTACTO */
+
+	/* FOOTER */
+
+	.footer{
+		padding: 35px 25px;
+	}
+
+	.footer-span{
+		text-align: center;
+	}
+
+	.social-media{
+		margin-top: 20px;
+	}
+
+	/* END FOOTER */
+}

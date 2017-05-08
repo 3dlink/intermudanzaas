@@ -6,7 +6,8 @@ Reiniciar contraseña
 
 @section('content')
 <div class="mdl-layout mdl-js-layout mdl-color--grey-100 mdl-auth-form">
-	<main class="mdl-layout__content">
+	<img src="{{url('images/intermudanzas-logo.png')}}" style="height: 30%; margin-top: 3%;">
+	<main class="mdl-layout__content" style="margin-top: 3%;">
 		<div class="mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
 				<h2 class="mdl-card__title-text text-center full-span block">
@@ -17,7 +18,7 @@ Reiniciar contraseña
 			</div>
 			<div class="mdl-card__supporting-text">
 
-				{!! Form::open(array('url' => url('/password/reset'), 'method' => 'POST', 'class' => 'form-horizontal', 'role' => 'form')) !!}
+				{!! Form::open(array('url' => url('app/password/reset'), 'method' => 'POST', 'class' => 'form-horizontal', 'role' => 'form')) !!}
 				{!! csrf_field() !!}
 				{!! Form::hidden('token', $token) !!}
 

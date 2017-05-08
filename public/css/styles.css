@@ -1,0 +1,899 @@
+/* FONTS */
+
+@font-face {
+	font-family: 'MutterKrauseBuch';
+	src: url('fonts/MutterKrauseBuch.ttf') format("truetype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'MutterKrauseBuch';
+	src: url('fonts/MutterKrauseHalbfett.ttf') format("truetype");
+	font-weight: 300
+}
+
+@font-face {
+	font-family: 'MadrasExtra';
+	src: url('fonts/MadrasExtraLight.otf') format("opentype");
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: 'MadrasExtra';
+	src: url('fonts/MadrasExtraBoldItalic.otf') format("opentype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Advent';
+	src: url('fonts/advent-Re.otf') format("opentype");
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('fonts/MYRIADPRO-BOLD.otf') format("opentype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('fonts/MyriadPro-BoldCondIt.otf') format("opentype");
+	font-weight: 500;
+}
+
+
+
+/* FONTS */
+
+
+/* GENERAL */
+*{
+	outline: none !important;
+	outline-width: 0 !important;
+	outline-style: none !important;
+	text-rendering: optimizeLegibility;
+}
+
+.grid-100{
+	width: 100%;
+}
+
+.grid-80{
+	width: 80%;
+}
+
+.grid-60{
+	width: 60%;
+}
+
+.grid-50{
+	width: 50%;
+}
+
+.grid-40{
+	width: 40%;
+}
+
+.grid-33{
+	width: 33.3%;
+}
+
+.grid-20{
+	width: 20%;
+}
+
+.l-margin-40{
+	margin-left: 40%;
+}
+
+.title{
+	font-family: "MutterKrauseBuch";
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.fleft{
+	float: left;
+}
+
+.fright{
+	float: right;
+}
+
+.desktop-hidden{
+	display: none;
+}
+
+/* GENERAL */
+
+/* HOME SECTION */
+
+.home{
+	position: relative;
+}
+
+.intermudanzas{
+	font-family: "MyriadPro";
+	font-weight: bold;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 2;
+	float: left;
+}
+
+.intermudanzas a{
+	text-decoration: none;
+	color: #d92d25;
+}
+
+.intermudanzas a:hover{
+	text-decoration: none;
+	color: #d92d25;
+}
+
+.home-menu{
+	position: fixed;
+	z-index: 101;
+	width: 100%;
+	padding: 20px 60px;
+
+	background-color: rgba(30, 33, 38, 0.6);
+}
+
+.menu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-family: "Advent";
+}
+
+.item-selected{
+	border-bottom-style: solid !important;
+	border-bottom-color: #bf0411 !important;
+	padding-bottom: 3px;
+}
+
+.menu-item{
+	display: inline;
+	margin: 10px;
+	padding: 0;
+	font-weight: 100;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	padding-bottom: 3px;
+}
+
+.menu-item:focus{
+	outline: none;
+}
+
+.menu-item:hover{
+	border-bottom-style: solid;
+	border-bottom-color: #bf0411;
+}
+
+.item-link{
+	text-decoration: none;
+	color: transparent;
+	cursor: pointer;
+}
+
+.item-link:hover{
+	text-decoration: none;
+}
+
+.item-link:focus{
+	text-decoration: none;
+}
+
+.menu-holder{
+	text-align: right;
+}
+
+.home-slider{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0 !important;
+}
+
+.slide{
+	height: 100%;
+	width: 100%;
+}
+
+.slide1{
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("../images/slider_fondo1.png");
+	position: relative;
+}
+
+.logo{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 25%;
+}
+
+.slide2{
+	position: relative;
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("../images/slider_fondo2.png");
+}
+
+.slide3{
+	position: relative;
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("../images/slider_fondo3.png");
+}
+
+.slide-quote{
+	position: absolute;
+	top: 50%;
+	transform: translate(0%,-50%);
+	width: 100%;
+
+	color: white;
+	text-align: center;
+}
+
+.quote-line1 {
+	font-family: "MadrasExtra";
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+.quote-line2{
+	font-family: "MutterKrauseBuch";
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.quote-open-1, .quote-close-1, .quote-open-2, .quote-close-2{
+	position: absolute;
+}
+
+.slick-dots{
+	bottom: 20px !important;
+	text-align: right !important;
+	right: 20px;
+}
+
+.slick-dots li button{
+	color: red !important;
+}
+
+.slick-dots li button::before{
+	color: white !important;
+	opacity: 1 !important;
+	font-size: 10px !important;
+}
+
+.slick-dots li.slick-active button::before{
+	color: red !important;
+}
+
+/* END HOME SECTION */
+
+
+/* QUIENES SOMOS SECTION */
+
+.quienes-somos{
+	position: relative;
+}
+
+.quienes-somos-left{
+	background-position: left;
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	background-image: url("../images/transporte_quienessomos.png");
+
+	position: relative;
+
+	overflow: hidden;
+}
+
+.quienes-somos-contenido{
+	font-family: "MadrasExtra";
+
+	position: relative;
+	left: 40%;
+
+	padding-top: 80px;
+	padding-bottom: 80px;
+	padding-right: 5%;
+	padding-left: 12%;
+
+	text-align: center;
+}
+
+.quienes-somos-fondo{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	right: 0;
+
+	margin-right: -40%;
+}
+
+.quienes-somos-title{
+	color: white;
+	text-align: left;
+}
+
+.quienes-somos-span{
+	color: white;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 15px;
+}
+
+.quienes-somos-terminosYcondiciones{
+	color: white;
+	font-weight: lighter;
+	font-size: 15px;
+
+	margin-top: 70px;
+	padding: 15px 30px;
+
+	background: transparent;
+	
+	border-radius: 30px 30px 30px 30px;
+	-moz-border-radius: 30px 30px 30px 30px;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	border: 2px solid #ffffff;
+}
+
+.quienes-somos-contenido-2{
+	font-family: "MadrasExtra";
+	position: absolute;
+	left: 40%;
+	top: 0;
+	text-align: center;
+	background-color: white;
+
+	margin-top: 80px;
+	margin-left: 12%;
+
+	display: none;
+}
+
+.quienes-somos-contenido-2 .content{
+	margin: 40px 30px;
+	position: relative;
+	font-size: 15px;
+
+	height: 340px;
+	overflow-y: scroll;
+}
+
+.quienes-somos-contenido-2-close{
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	cursor: pointer;
+	height: 24px;
+}
+
+.terminos-y-condiciones-title{
+	color: #ff0000;
+}
+
+.terminos-y-condiciones-p{
+	margin-top: 25px;
+	color: #1e1e1e;
+	text-align: justify;
+	padding-right: 30px;
+}
+
+.p-title{
+	font-style: bold;
+	font-size: 20px;
+}
+
+/* END QUIENES SOMOS SECTION */
+
+/* BENEFICIOS SECTION */
+
+.beneficios{
+	background-position: 0 20px;
+	background-size: 95% auto;
+	background-repeat: no-repeat;
+	background-image: url("../images/fondo_beneficios.png");
+}
+
+.beneficios-title{
+	text-align: center;
+	color: #1d1d64;
+	margin-top: 60px;
+}
+
+.beneficio-container{
+	text-align: center;
+	margin-top: 100px;
+
+	display: table-cell;
+}
+
+.beneficios-content{
+	margin-bottom: 120px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.beneficio-name{
+	font-family: "MadrasExtra";
+	font-weight: lighter;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.beneficios-img-holder{
+	height: 80px;
+}
+
+.beneficio-img{
+	height: 80px;
+}
+
+.servicios-vip .beneficio-img{
+	height: 55px;
+}
+
+.alianzas-estrategicas .beneficio-img{
+	height: 60px;
+}
+
+.mudanza-maritima .beneficio-img{
+	height: 50px;
+}
+
+.honestidad .beneficio-img{
+	height: 68px;
+}
+
+/* END BENEFICIOS SECTION */
+
+/* MUDANZAS SECTION */
+
+.mudanzas{
+	/*	background-image: url("../images/fondo_beneficios.png");*/
+}
+
+.mudanzas-title{
+	text-align: center;
+	color: #1d1d64;
+}
+
+.mudanzas-flecha{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.mudanzas-container{
+	position: relative;
+	margin-top: 30px;
+}
+
+.mudanzas-content{
+	margin-bottom: 120px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.mudanzas-name{
+	font-family: "MadrasExtra";
+	font-weight: lighter;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.tab-fix {
+	display: table !important;
+}
+
+.flip{
+	width: 100%;
+	height: 280px;
+}
+
+.front{
+	text-align: center;
+}
+
+.table{
+	z-index: 1;
+	display: table;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.75);
+}
+
+.front-content{
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.flip-title{
+	color: white;
+	margin-bottom: 0;
+}
+
+.front-p{
+	font-family: "MadrasExtra";
+	color: white;
+
+	font-weight: lighter;
+}
+
+.flip-simbolo{
+	color: #bc0000;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.back{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("../images/fondo_mudanzas.png");
+
+	padding: 45px 60px;
+
+	font-family: "MadrasExtra";
+}
+
+.mudanzas-back-p{
+	color: white;
+	text-align: justify;
+}
+
+.mudanzas-back-flecha{
+	margin-left: -15px;
+}
+
+.mudanzas-saber-mas{
+	color: white;
+	font-weight: lighter;
+	font-size: 15px;
+
+	/*margin-top: 70px;*/
+	padding: 5px 15px;
+
+	background: transparent;
+
+	border-radius: 30px 30px 30px 30px;
+	-moz-border-radius: 30px 30px 30px 30px;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	border: 2px solid #ff0000;
+
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	margin-left: 0%;
+	transform: translate(-50%, 0%);
+}
+
+.pais{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.pais1.front{
+	background-image: url("../images/colombia.png");
+}
+
+.pais2.front{
+	background-image: url("../images/caracas.png");
+}
+.pais3.front{
+	background-image: url("../images/ecuador.png");
+}
+.pais4.front{
+	background-image: url("../images/panama.png");
+}
+.pais5.front{
+	background-image: url("../images/usa.png");
+}
+.pais6.front{
+	background-image: url("../images/brasil.png");
+}
+
+.separador{
+	height: 20px;
+}
+
+/* END MUDANZAS SECTION */
+
+
+/* GALERIA SECTION */
+
+.galeria{
+	margin-top: 60px;
+	height: 500px;
+}
+
+.galeria-title{
+	text-align: center;
+	color: #1d1d64;
+}
+
+.galeria-holder{
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+}
+
+.galeria-slide{
+	position: absolute;
+	cursor: pointer;
+	width: 325px;
+	height: 185px;
+	color: white;
+	transition: top 1s, left 1s, transform 1s;
+	-webkit-transition: top 1s, left 1s, right 1s, transform 1s;
+	box-shadow: 0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2);
+}
+
+.outer{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	z-index: 0;
+	top: 10%;
+}
+
+.outer-left{
+	left: 5%;
+}
+
+.left-copy{
+	left: 5%;
+	z-index: -1;
+}
+
+.outer-left-transition{
+	left: 5% !important;
+	top: 10% !important;
+	z-index: 0 !important;
+}
+
+.outer-right{
+	left: 95%;
+	transform: translate(-100%,0%);
+}
+
+.right-copy{
+	left: 95%;
+	transform: translate(-100%,0%);
+	z-index: -1;
+}
+
+.outer-right-transition{
+	top: 10% !important;
+	z-index: 0 !important;
+	left: 95% !important;
+	transform: translate(-100%,0%) !important;
+	-webkit-transform: translate(-100%,0%) !important;
+}
+
+.inner{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	z-index: 10;
+	top: 15%;
+}
+
+.inner-left{
+	left: 20%;
+}
+
+.inner-left-transition{
+	left: 20% !important;
+	z-index: 10 !important;
+	top: 15% !important;
+	-webkit-transform: translate(0%, 0%) !important;
+	transform: translate(0%,0%) !important;
+}
+
+.inner-right{
+	left: 80%;
+	transform: translate(-100%, 0%);
+}
+
+.inner-right-transition{
+	left: 80% !important;
+	transform: translate(-100%, 0%) !important;
+	-webkit-transform: translate(-100%,0%) !important;
+	z-index: 10 !important;
+	top: 15% !important;
+}
+
+.middle{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	z-index: 100;
+	left: 50%;
+	top: 20%;
+	transform: translate(-50%,0%);
+}
+
+.middle:hover{
+	cursor: pointer;
+}
+
+.middle-transition{
+	z-index: 100 !important;
+	left: 50% !important;
+	top: 20% !important;
+	-webkit-transform: translate(-50%, 0%) !important;
+	transform: translate(-50%,0%) !important;
+}
+
+.flecha{
+	position: absolute;
+	bottom: 30%;
+	cursor: pointer;
+}
+
+.flecha-izq{
+	left: 50%;
+	transform: translate(-200%, 0%);
+}
+
+.flecha-der{
+	right: 50%;
+	transform: translate(200%, 0%);
+}
+
+.img-holder{
+	height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/* END GALERIA SECTION */
+
+
+/* CONTACTO SECTION */
+
+.contacto{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-image: url("../images/fondo_contacto.png");
+
+	padding: 80px 120px;
+	position: relative;
+}
+
+.contact-flecha{
+	position: absolute;
+	transform: translate(-50%, 0%);
+	left: 50%;
+}
+
+.contact-form-input{
+	width: 100%;
+	background-color: #c7c6c4;
+	opacity: 0.9;
+	border-width: 0;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.contact-form-label{
+	font-family: "MutterKrauseBuch";
+	font-weight: bold;
+	color: white;
+
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+.contact-container{
+	padding: 0 5%;
+	margin: 0 auto;
+}
+
+.contact-warning{
+	font-family: "MadrasExtra";
+	font-weight: lighter;
+	color: white;
+}
+
+.contact-logo{
+	width: 50%;
+	left: 55%;
+	position: absolute;
+	transform: translate(-50%, 25%);
+}
+
+.contact-right{
+	position: relative;
+}
+
+.contact-form textarea{
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.contact-submit{
+	color: white;
+	font-family: "MadrasExtra";
+	font-weight: lighter;
+	font-size: 15px;
+
+	margin-top: 30px;
+	padding: 8px 60px;
+
+	background: transparent;
+
+	border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 15px 15px 15px 15px;
+	border: 1px solid #ffffff;
+}
+
+/* END CONTACTO SECTION */
+
+
+/* FOOTER SECTION */
+
+.footer{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("../images/footer_bg.png");
+
+	text-align: center;
+	font-family: "MadrasExtra";
+
+	padding: 30px 0;
+}
+
+.footer-span{
+	color: white;
+	font-weight: lighter;
+	font-size: 15px;
+}
+
+.footer-span-left{
+	/*margin-right: 15px;*/
+	text-align: right;
+	padding-right: 15px;
+}
+
+.footer-span-right{
+	/*margin-left: 15px;*/
+	text-align: left;
+	padding-left: 15px;
+}
+
+.social-media{
+	color: white;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+.social-icon{
+	cursor: pointer;
+}
+
+/* END FOOTER SECTION */

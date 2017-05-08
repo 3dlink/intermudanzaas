@@ -117,7 +117,7 @@ class AuthController extends Controller {
 
 			$this->sendEmail($user);
 	        // $user_role = Role::whereName('usuario')->first();
-	        $role = Role::find(3);
+	        $role = Role::find(5);
 	        $role->users()->save($user);
 
             $profile = new Profile;
@@ -165,11 +165,11 @@ class AuthController extends Controller {
 		if($user->accountIsActive($code)) {
 
 			\Session::flash('message', \Lang::get('auth.successActivated') );
-			return redirect('home');
+			return redirect('app');
 		}
 
 		\Session::flash('message', \Lang::get('auth.unsuccessful') );
-		return redirect('home');
+		return redirect('app');
 
 	}
 }

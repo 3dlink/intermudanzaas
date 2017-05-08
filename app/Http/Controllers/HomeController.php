@@ -35,4 +35,9 @@ class HomeController extends Controller {
 		return view('app');
 	}
 
+	public function onePage()
+	{
+		return view('index');
+	}
+
 }

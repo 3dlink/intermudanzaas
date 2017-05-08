@@ -9,6 +9,7 @@ return [
 	'emailRegistrationPwMessage'       	=> 	'Gracias por registrarse, haga click en el botón para activar su cuenta.',
 	'emailsClickHereRegistrationBTN'   	=> 	'Active su cuenta',
 	'emailRegistrationPwFooter'        	=> 	'&copy; 3D Link. 2016',
+	'emailActivationClient'				=>	'Gracias por contactar con nosotros, hemos creado una cuenta para usted, por favor active su cuenta',
 
 	// RESET PASSWORD EMAIL
 	'emailResetPwSynapsis'      		=> 	'You have requested to reset your password',

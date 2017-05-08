@@ -15,7 +15,16 @@ class UserController extends Controller
 	 */
 	public function index()
 	{
-		return view('pages.home');
+		if (\Auth::user()->hasRole('cliente') && \Auth::user()->defaultPwd != '') {
+			return view('admin.changepwd')->with('status', 'Debe modificar su contraseña');
+		}else{
+			if (\Auth::user()->hasRole('cliente')) {
+				return redirect('app/estimaciones');
+			} else {
+				return view('pages.home');
+			}
+			
+		}
 	}
 
 	public function getHome()

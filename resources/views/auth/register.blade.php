@@ -29,7 +29,7 @@
 			                </div>
 			                <div class="mdl-card__supporting-text ">
 
-								{!! Form::open(array('url' => url('/auth/register'), 'method' => 'POST', 'class' => '', 'role' => 'form', 'id' => 'register')) !!}
+								{!! Form::open(array('url' => url('app/auth/register'), 'method' => 'POST', 'class' => '', 'role' => 'form', 'id' => 'register')) !!}
 
 									<div class="mdl-grid ">
 <!-- 									  	<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
@@ -95,8 +95,8 @@
 
 			                <div class="mdl-card__actions mdl-card--border">
 
-			                    {!! HTML::link(url('/password/email'), Lang::get('auth.forgot'), array('id' => 'forgot', 'class' => 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect left')) !!}
-			                  	{!! HTML::link(url('/login'), Lang::get('auth.login'), array('id' => 'login', 'class' => 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect right')) !!}
+			                    {!! HTML::link(url('app/password/email'), Lang::get('auth.forgot'), array('id' => 'forgot', 'class' => 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect left')) !!}
+			                  	{!! HTML::link(url('app/login'), Lang::get('auth.login'), array('id' => 'login', 'class' => 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect right')) !!}
 
 			                </div>
 			        </div>
