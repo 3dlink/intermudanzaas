@@ -564,15 +564,15 @@
 	}
 
 	.slide1{
-		background-image: url("../images/slider_fondo1mobile.jpg");
+		background-image: url("../images/slider_fondo1mobile-mudanzas.jpg");
 	}
 
 	.slide2{
-		background-image: url("../images/slider_fondo2mobile.jpg");
+		background-image: url("../images/slider_fondo2mobile-mudanzas.jpg");
 	}
 
 	.slide3{
-		background-image: url("../images/slider_fondo3mobile.jpg");
+		background-image: url("../images/slider_fondo3mobile-mudanzas.jpg");
 	}
 
 	.slide-quote{
@@ -598,7 +598,7 @@
 	/* NOSOTROS */
 
 	.quienes-somos-left{
-		background-image: url("../images/quienessomos_fondomobile.jpg");
+		background-image: url("../images/quienessomos_fondomobile-mudanzas.jpg");
 		background-position: center;
 		background-size: cover;
 	}
@@ -732,7 +732,7 @@
 	}
 
 	.contact-form{
-		background-image: url("../images/fondo_contacto.png");
+		background-image: url("../images/fondo_contacto-mudanzas.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;

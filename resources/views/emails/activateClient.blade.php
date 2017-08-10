@@ -243,7 +243,7 @@
 																<tr>                                                                                           
 																	<td style="text-align: center;">
 																		<div>
-																			<a href="{{ url('activate/'.$code) }}" class="button" style="background-color:#337ab7;border:1px solid #337ab7;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:43px;text-align:center;text-decoration:none;width:100%;-webkit-text-size-adjust:none;mso-hide:all;">
+																			<a href="{{ url('app/activate/'.$code) }}" class="button" style="background-color:#337ab7;border:1px solid #337ab7;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;color:#FFFFFF;display:inline-block;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:43px;text-align:center;text-decoration:none;width:100%;-webkit-text-size-adjust:none;mso-hide:all;">
 																				Ingresar Ahora
 																			</a>
 																		</div>

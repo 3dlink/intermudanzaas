@@ -3,6 +3,10 @@ var l2 = $(".slide2 .quote-line2");
 var l3 = $(".slide3 .quote-line1");
 var l4 = $(".slide3 .quote-line2");
 var timeout = 1000; 
+toastr.options = {
+	"preventDuplicates": true,
+	"positionClass": "toast-bottom-right"
+};
 
 $(document).scroll(()=>{
 	let home 		= $("#home");

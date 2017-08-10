@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Intermudanzas</title>
-	<meta charset="utf-8">
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<meta content="blogger" name="generator">
+	<meta content="Mudanzas Internacionales, Mudanza internacional, menaje domestico, mudanza, Ecuador, Colombia, Panamá, Miami, Brasil." name="description">
+	<meta content="http://www.intermudanzas.com/" property="og:url">
+	<meta content="Mudanzas Internacionales Venezuela" property="og:title">
+	<meta content="Mudanzas Internacionales, Mudanza internacional, menaje domestico, mudanza, Ecuador, Colombia, Panamá, Miami, Brasil." property="og:description">
+	<title>Mudanzas Internacionales Venezuela</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -136,20 +141,20 @@
 
 					<div class="beneficios-content clearfix">
 						<div class="grid-20 beneficio-container servicios-vip fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-							<div class="beneficios-img-holder"><img class="beneficio-img" src="images/servicios_vip.png"></div>
+							<div class="beneficios-img-holder"><img class="beneficio-img" src="images/servicios_vip-mudanzas.png"></div>
 							<h4 class="beneficio-name">SERVICIOS VIP</h4>
 						</div>
 
 						<div class="grid-20 beneficio-container alianzas-estrategicas fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/alianzas_estrategicas.png">
+								<img class="beneficio-img" src="images/alianzas_estrategicas-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">ALIANZAS <br> ESTRATÉGICAS</h4>
 						</div>
 
 						<div class="grid-20 beneficio-container dtd-services fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/dtd_service.png">
+								<img class="beneficio-img" src="images/dtd_service-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">DOOR TO DOOR <br> SERVICE</h4>
 						</div>
@@ -158,14 +163,14 @@
 
 						<div class="grid-20 beneficio-container mudanza-maritima fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/mudanza_maritima.png">
+								<img class="beneficio-img" src="images/mudanza_maritima-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">MUDANZA MARÍTIMA</h4>
 						</div>
 
 						<div class="grid-20 beneficio-container tramites-aduaneros fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/tramites_aduaneros.png">
+								<img class="beneficio-img" src="images/tramites_aduaneros-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">TRÁMITES <br> ADUANEROS</h4>
 						</div>
@@ -175,7 +180,7 @@
 
 						<div class="grid-20 beneficio-container confianza fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/confianza.png">
+								<img class="beneficio-img" src="images/confianza-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">CONFIANZA</h4>
 						</div>
@@ -184,21 +189,21 @@
 
 						<div class="grid-20 beneficio-container precio-beneficio fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/precio_beneficio.png">
+								<img class="beneficio-img" src="images/precio_beneficio-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">PRECIO <br> BENEFICIO</h4>
 						</div>
 
 						<div class="grid-20 beneficio-container honestidad fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/honestidad.png">
+								<img class="beneficio-img" src="images/honestidad-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">HONESTIDAD</h4>
 						</div>
 
 						<div class="grid-20 beneficio-container garantia fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/garantia.png">
+								<img class="beneficio-img" src="images/garantia-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">GARANTÍA</h4>
 						</div>
@@ -207,7 +212,7 @@
 
 						<div class="grid-20 beneficio-container clientes-felices fleft mobile-grid-30 tablet-grid-30" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 							<div class="beneficios-img-holder">
-								<img class="beneficio-img" src="images/clientes_felices.png">
+								<img class="beneficio-img" src="images/clientes_felices-mudanzas.png">
 							</div>
 							<h4 class="beneficio-name">CLIENTES FELICES</h4>
 						</div>

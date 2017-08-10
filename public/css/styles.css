@@ -207,7 +207,7 @@
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-image: url("../images/slider_fondo1.png");
+	background-image: url("../images/slider_fondo1-mudanzas.png");
 	position: relative;
 }
 
@@ -224,7 +224,7 @@
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-image: url("../images/slider_fondo2.png");
+	background-image: url("../images/slider_fondo2-mudanzas.png");
 }
 
 .slide3{
@@ -232,7 +232,7 @@
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-image: url("../images/slider_fondo3.png");
+	background-image: url("../images/slider_fondo3-mudanzas.png");
 }
 
 .slide-quote{
@@ -295,7 +295,7 @@
 	background-position: left;
 	background-size: 50% 100%;
 	background-repeat: no-repeat;
-	background-image: url("../images/transporte_quienessomos.png");
+	background-image: url("../images/transporte_quienessomos-mudanzas.png");
 
 	position: relative;
 
@@ -409,7 +409,7 @@
 	background-position: 0 20px;
 	background-size: 95% auto;
 	background-repeat: no-repeat;
-	background-image: url("../images/fondo_beneficios.png");
+	background-image: url("../images/fondo_beneficios-mudanzas.png");
 }
 
 .beneficios-title{
@@ -546,7 +546,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-image: url("../images/fondo_mudanzas.png");
+	background-image: url("../images/fondo_mudanzas-mudanzas.png");
 
 	padding: 45px 60px;
 
@@ -591,23 +591,23 @@
 }
 
 .pais1.front{
-	background-image: url("../images/colombia.png");
+	background-image: url("../images/colombia-mudanzas.png");
 }
 
 .pais2.front{
-	background-image: url("../images/caracas.png");
+	background-image: url("../images/caracas-mudanzas.png");
 }
 .pais3.front{
-	background-image: url("../images/ecuador.png");
+	background-image: url("../images/ecuador-mudanzas.png");
 }
 .pais4.front{
-	background-image: url("../images/panama.png");
+	background-image: url("../images/panama-mudanzas.png");
 }
 .pais5.front{
-	background-image: url("../images/usa.png");
+	background-image: url("../images/usa-mudanzas.png");
 }
 .pais6.front{
-	background-image: url("../images/brasil.png");
+	background-image: url("../images/brasil-mudanzas.png");
 }
 
 .separador{
@@ -777,7 +777,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
-	background-image: url("../images/fondo_contacto.png");
+	background-image: url("../images/fondo_contacto-mudanzas.png");
 
 	padding: 80px 120px;
 	position: relative;
@@ -860,7 +860,7 @@
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url("../images/footer_bg.png");
+	background-image: url("../images/footer_bg-mudanzas.png");
 
 	text-align: center;
 	font-family: "MadrasExtra";

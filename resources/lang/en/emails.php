@@ -8,7 +8,7 @@ return [
 	'emailRegistrationPwSalutation'    	=> 	'Saludos :name,',
 	'emailRegistrationPwMessage'       	=> 	'Gracias por registrarse, haga click en el botón para activar su cuenta.',
 	'emailsClickHereRegistrationBTN'   	=> 	'Active su cuenta',
-	'emailRegistrationPwFooter'        	=> 	'&copy; 3D Link. 2016',
+	'emailRegistrationPwFooter'        	=> 	'&copy; Intermudanzas C.A.',
 	'emailActivationClient'				=>	'Gracias por contactar con nosotros, hemos creado una cuenta para usted, por favor active su cuenta',
 
 	// RESET PASSWORD EMAIL
@@ -17,6 +17,6 @@ return [
 	'emailResetPwSalutation'    		=> 	'Saludos,',
 	'emailResetPwMessage'       		=> 	'Usted ha solicitado reiniciar su contraseña. Por favor haga click en el siguiente botón.',
 	'emailsClickHereResetBTN'   		=> 	'Reiniciar contraseña',
-	'emailResetPwFooter'        		=> 	'&copy; 3D Link. 2016',
+	'emailResetPwFooter'        		=> 	'&copy; Intermudanzas C.A.',
 
 ];
